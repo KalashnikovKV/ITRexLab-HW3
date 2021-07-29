@@ -1,0 +1,22 @@
+const Calc = require('./calc')
+const SpecialCalc = require('./specialCalc')
+const romanToMorze = require('./morze')
+const arabToRoman = require('./romain')
+
+const scalar = new Calc()
+console.log("scalar:")
+console.log(scalar.sum(1, 1))
+console.log(scalar.div(4, 0))
+console.log(scalar.mul(4, 2))
+console.log(scalar.sub(6, 3))
+
+const morze = new specialCalc(romanToMorze)
+console.log("morze:")
+console.log(morze.div(4, 0))
+console.log(morze.mul(4, 2))
+
+const romain = new SpecialCalc(arabToRoman)
+console.log("romain:")
+console.log(romain.sum(1, 1))
+console.log(romain.div(4, 0))
+console.log(romain.sub(6, 3))
