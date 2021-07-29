@@ -1,4 +1,3 @@
-
 const fetch = require('node-fetch')
 
 class Users {
@@ -11,10 +10,13 @@ class Users {
       `https://randomuser.me/api/?results=${this.number}`
       );
     const data = await response.json()
-    
+    this.displayUsers(data)
+  }
+
+  async displayUsers(data){
     data.results.forEach((element) => {
       console.log(`
-      Person: ${element.name.title} ${element.name.first} ${element.name.last}
+      Person: ${this.getPerson(element.name)}
       Gender: ${element.gender}
       Timezone: ${element.location.timezone.offset} ${element.location.timezone.description}
       Cell: ${element.cell}  
@@ -24,6 +26,11 @@ class Users {
       Nationality: ${element.nat}`)
     })
   }
+
+  getPerson(element){
+    return `${element.title} ${element.first} ${element.last}`
+  }
+
 }
 
 const users = new Users(2)

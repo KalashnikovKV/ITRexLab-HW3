@@ -1,6 +1,6 @@
 const StringFormatter = require('./stringformatter')
 
-class removeNumbers extends StringFormatter {
+class RemoveNumbers extends StringFormatter {
   constructor() {
     super()
     this.delete = /\d/g, /-d/g, /.d/g
@@ -10,4 +10,4 @@ class removeNumbers extends StringFormatter {
     return string.replace(this.delete, '')
   }
 }
-module.exports = removeNumbers
+module.exports = RemoveNumbers

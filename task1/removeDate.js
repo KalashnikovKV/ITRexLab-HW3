@@ -1,6 +1,6 @@
 const StringFormatter = require('./stringformatter')
 
-class removeDate extends StringFormatter {
+class RemoveDate extends StringFormatter {
   constructor() {
     super()
     this.delete = [
@@ -16,4 +16,4 @@ class removeDate extends StringFormatter {
     return string
   }
 }
-module.exports = removeDate
+module.exports = RemoveDate

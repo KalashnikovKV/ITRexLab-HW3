@@ -1,6 +1,6 @@
 const StringFormatter = require('./stringformatter')
 
-class removeString extends StringFormatter {
+class RemoveString extends StringFormatter {
   constructor(reg) {
     super()
     this.delete = reg
@@ -10,4 +10,4 @@ class removeString extends StringFormatter {
     return string.split(this.delete).join('')
   }
 }
-module.exports = removeString
+module.exports = RemoveString

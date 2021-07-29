@@ -10,7 +10,7 @@ console.log(scalar.div(4, 0))
 console.log(scalar.mul(4, 2))
 console.log(scalar.sub(6, 3))
 
-const morze = new specialCalc(romanToMorze)
+const morze = new SpecialCalc(romanToMorze)
 console.log("morze:")
 console.log(morze.div(4, 0))
 console.log(morze.mul(4, 2))
